@@ -14,7 +14,7 @@ function connection() {
 $con = connection();
 
 if (isset($_POST['btnSubmit'])) {
-    $Givendata = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_SPECIAL_CHARS);
+    $Givendata = filter_input(INPUT_POST, 'saveData', FILTER_SANITIZE_SPECIAL_CHARS);
 
     // --------------------------
     // Level 1 AES Encryption
@@ -59,7 +59,7 @@ if (isset($_POST['btnSubmit'])) {
 </head>
 <body>
     <form action="" method="post">
-        <input type="text">
+        <input type="text" name="saveData">
         <button type="submit" name="btnSubmit"> save </button>
     </form>
 </body>
